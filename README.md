@@ -69,17 +69,21 @@ Here is a selection of the interesting parts:
 .
 ├── <a href="#nvmrc" title=".nvmrc file">.nvmrc</a>
 ├── src
-│   ├── components
-│   ├── lib
-│   ├── locales
-│   ├── pages
-│   ├── queries
-│   ├── types
-│   ├── utils
+│   ├── <a href="#srccomponents" title="src/components folder">components</a>
+│   ├── <a href="#srclib" title="src/lib folder">lib</a>
+│   ├── <a href="#srclocales" title="src/locales folder">locales</a>
+│   ├── <a href="#srcpages" title="src/pages folder">pages</a>
+│   ├── <a href="#srcqueries" title="src/queries folder">queries</a>
+│   ├── <a href="#srctypes" title="src/components folder">types</a>
+│   ├── <a href="#srcutils" title="src/utils folder">utils</a>
 ├── test
-│   ├── fixtures
-├── mock
+│   ├── <a href="#testfixtures" title="test/fixtures folder">fixtures</a>
+├── <a href="#mock" title="mock folder">mock</a>
 </pre>
+
+#### `.nvmrc`
+
+File with specifig NodeJS version to be used in this application.
 
 #### `src/components`
 
