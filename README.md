@@ -113,7 +113,7 @@ That's wonderland! In this folder you can find all the integrations with the oth
 
 Specific types used and shared across different files and components.
 
-#### `src/utis`
+#### `src/utils`
 
 A folder to add some common utilities!
 
