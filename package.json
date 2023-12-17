@@ -1,0 +1,56 @@
+{
+  "name": "navalia-app",
+  "private": false,
+  "version": "1.0.0",
+  "author": "Will Mendes",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "start": "npm run dev",
+    "//-": "------------------- TESTING SCRIPTS ----------------------------",
+    "test": "vitest run --reporter verbose",
+    "test:ci": "npm run test -i || exit 1 && npm run lint && npm run tsc:check",
+    "test:watch": "vitest --reporter verbose",
+    "tsc:check": "tsc --noEmit",
+    "//--": "------------------- LINTING SCRIPTS ----------------------------",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "i18next": "^23.7.11",
+    "i18next-browser-languagedetector": "^7.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^13.5.0",
+    "react-query": "^3.39.3",
+    "react-router-dom": "^6.13.0",
+    "use-local-storage-state": "^18.3.3"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.3.1",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@types/react": "^18.0.37",
+    "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.59.0",
+    "@typescript-eslint/parser": "^5.59.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.3.4",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "jsdom": "^22.1.0",
+    "prettier": "3.1.1",
+    "sass": "^1.63.4",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.9",
+    "vitest": "^0.32.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

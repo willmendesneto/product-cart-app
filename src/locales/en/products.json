@@ -1,0 +1,6 @@
+{
+  "productsPageTitle": "Products",
+  "noProductsFound": "No products found",
+  "priceCardLabel": "Price: {{price}}",
+  "apiError": "An error occurred when fetching data. Please check the API and try again."
+}

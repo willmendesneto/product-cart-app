@@ -1,0 +1,4 @@
+{
+  "cartPageTitle": "Cart",
+  "cartTotalLabel": "Total: {{total}}"
+}
