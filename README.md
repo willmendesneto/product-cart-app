@@ -2,6 +2,9 @@
 
 > Navalia App - Shopping Cart
 
+![main branch](https://github.com/willmendesneto/navalia-app/actions/workflows/main.yml/badge.svg
+?branch=main)
+
 ## Frameworks, Libraries and Tools
 
 - Typescript: so we can add some batteries in our JS files;
