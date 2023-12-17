@@ -28,7 +28,7 @@ Also, by having carts in a specific boudary, React Query as API manager applying
 
 ### However, here's the architecture design for a Redux implementation
 
-- Using Redux Toolkit as Redux solution: it avoids a lot of duplication and boilerplate apps using redux commonly enforces
+- Using [Redux Toolkit](https://redux-toolkit.js.org/) as Redux solution: it avoids a lot of duplication and boilerplate apps using redux commonly enforces
 - Pretty much moving the cart counter for a reducer + actions and state
   - store only the id and quantity insted of a whole product item for the sake of performance and Store best practices https://redux.js.org/style-guide/
 - Store for products: not needed! By following the current architecture design, the products are coming from the API, stored and cached via React Query, having only a reference of `product.id`. So that, we can make sure the pages are stateless and requesting the product data by id when/id necessary. Depending of the case this request can be even cached for some specific time based on the product id - thanks to React Query :) 
