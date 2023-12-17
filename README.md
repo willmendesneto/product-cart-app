@@ -79,6 +79,7 @@ Here is a selection of the interesting parts:
 │   ├── utils
 ├── test
 │   ├── fixtures
+├── mock
 </pre>
 
 #### `src/components`
@@ -121,6 +122,14 @@ A subset of files with methods and functions used on the tests as helpers. Mocks
 
 A list of useful fixtures to be used in our tests, supporting types/interfaces
 
+
+#### `mock`
+
+A folder with files used on json-server configuration for API mocking purposes. 
+
+E.G: by adding `products.json` inside this folder, the endpoint `http://localhost:5173/api/products` will be available on the app.
+
+> For more details on supported HTTP methods and such, please check https://github.com/alextim/vite-plugin-simple-json-server/tree/main/packages/vite-plugin-simple-json-server#readme 
 
 ### Run the project
 
