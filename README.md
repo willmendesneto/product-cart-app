@@ -8,6 +8,7 @@
 ## Frameworks, Libraries and Tools
 
 - Typescript: so we can add some batteries in our JS files;
+- JSON Server as API mock solution;
 - ESLint + Prettier for code linting, enforcing some rules and patterns across the codebase;
 - Fetch as HTTP client;
 - React Query as HTTP Request solution for reconnections, cache and more;
@@ -124,7 +125,8 @@ A list of useful fixtures to be used in our tests, supporting types/interfaces
 ### Run the project
 
 ```bash
-$ npm start # run the project
+# run the project using json-server mocks
+$ npm start
 ```
 
 ### Run the tests

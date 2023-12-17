@@ -48,6 +48,7 @@
     "sass": "^1.63.4",
     "typescript": "^5.0.2",
     "vite": "^4.3.9",
+    "vite-plugin-simple-json-server": "^0.6.2",
     "vitest": "^0.32.0"
   },
   "engines": {
