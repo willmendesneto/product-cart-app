@@ -18,18 +18,16 @@
     resize: vertical;
   }
 
-  input[type="button"] {
-    -webkit-appearance: button;
-    cursor: pointer;
-  }
-
+  // Removing spin cursors in `input[type="number"]`
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
     -webkit-appearance: none;
   }
 
   input[type='button'] {
-    background-color: #eeeeee;
+    cursor: pointer;
+    background-color: #f9ba49;
+    color: #000;
     border: none;
     width: 30px;
     transition: all 300ms ease;
@@ -40,13 +38,21 @@
     position: relative;
 
     &:hover {
-      background-color: #D5D9D9;
+      background-color: #eecf1d;
     }
   }
 
+  .buttonPlus {
+    border-radius: 0 5px 5px 0;
+  }
+
+  .buttonMinus {
+    border-radius: 5px 0 0 5px;
+  }
+
   input[type="number"] {
-    -moz-appearance: textfield;
-    -webkit-appearance: none;
     width: 50px;
+    border-top: 1px solid #f9ba49;
+    border-bottom: 1px solid #f9ba49;
   }
 }

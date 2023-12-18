@@ -1,11 +1,11 @@
 .cartItemWrapper {
   display: flex;
-  border-top: 1px dotted;
-  border-left: 1px dotted;
-  border-right: 1px dotted;
+  border: 1px dotted #333;
+  border-radius: 5px;
   padding: .3rem .5rem;
   align-items: center;
   min-height: 200px;
+  margin-bottom: 1em;
 
   h3 {
     color: #007185;

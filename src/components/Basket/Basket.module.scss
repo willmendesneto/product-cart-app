@@ -1,4 +1,6 @@
 .basketWrapper {
+  height: 7em;
+  width: 7em;
   margin: 1rem;
   padding: 0 1rem;
   display: flex;
@@ -8,9 +10,13 @@
   align-items: center;
   flex-direction: row-reverse;
   justify-content: space-between;
+  border: 1px solid #f9ba49;
+  border-radius: 50%;
+  color: #000;
 
   &:hover {
     outline: 1px solid white;
+    background: #f9ba49;
   }
 
   .cart {
@@ -23,7 +29,7 @@
   .productsCount {
     z-index: 1;
     font-size: 2em;
+    font-weight: bold;
     top: 38px;
-    color: orange;
   }
 }

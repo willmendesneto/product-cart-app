@@ -15,7 +15,8 @@
   }
 
   button {
-    background-color: #fbd815;
+    background-color: #f9ba49;
+    font-weight: bold;
     width: 13rem;
     padding: .5rem;
     font-size: 1.1em;
@@ -32,6 +33,8 @@
     &:disabled {
       opacity: .5;
       background-color: lightgray;
+      color: #007185;
+      cursor: not-allowed;
     }
   }
 }
