@@ -38,14 +38,14 @@ module.exports = {
           {
             group: ['..*', './*'],
             message:
-              "Please import components using namespace directly. E.G: `import {MyComponent} from '@/<path-from-src-folder>'` instead of `import {MyComponent} from './<path-from-src-folder>'`",
+              "Please import components using namespace directly. E.G: `import { MyComponent } from '@/<path-from-src-folder>'` instead of `import { MyComponent } from './<path-from-src-folder>'`",
           },
         ],
         paths: [
           {
             name: '@testing-library/react',
             importNames: ['render'],
-            message: 'Please use `import { renderWithQueryProvider} from "@test/testUtils"` instead',
+            message: 'Please use `import { renderWithQueryProvider } from "@test/testUtils"` instead',
           },
         ],
       },
@@ -73,18 +73,12 @@ module.exports = {
         enforceForRenamedProperties: false,
       },
     ],
-
     'no-restricted-properties': [
       2,
       {
         object: 'Object',
         property: 'create',
         message: 'Please use Object destructuring instead. E.G. `const data = {...defaultValues, newValue: true }`',
-      },
-      {
-        object: 'document',
-        property: 'cookie',
-        message: `Please use 'setCookie', 'getCookie' instead. E.G. "setCookie('<cookie-key>', <cookie-value>, <number-of-days-to-expire>)"`,
       },
     ],
 
@@ -97,6 +91,24 @@ module.exports = {
   },
   overrides: [
     {
+      files: ['!vite.config.ts'],
+      rules: {
+        'import/no-default-export': 'error',
+      },
+    },
+    {
+      files: ['!src/queries/*.ts'],
+      rules: {
+        'no-restricted-globals': [
+          'error',
+          {
+            name: 'fetch',
+            message: '`fetch()` usage is only allowed inside `@/queries` folder',
+          },
+        ],
+      },
+    },
+    {
       files: ['!src/utils/storage.ts'],
       rules: {
         'no-restricted-imports': [
@@ -105,7 +117,7 @@ module.exports = {
             patterns: [
               {
                 group: ['use-local-storage-state'],
-                message: 'Please add your usage ONLY in `@/utils/storage` file',
+                message: '`use-local-storage-state` usage is only allowed inside `@/utils/storage` file',
               },
             ],
           },

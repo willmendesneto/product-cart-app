@@ -173,15 +173,50 @@ $ npm run lint
 $ npm build # run the tests
 ```
 
+## Architectural Decisions by tooling
+
+By using ESlint and Prettier, this project is not only enforcing some code rules, but also some architectural decisions, such as:
+
+### Importing components via app alias instead of relative imports
+
+This will support developers during maintenance and refactor across the components since it enforces naming exports, which makes navigation through editors even more faster and enjoyable
+
+### Not allowing `export default`
+
+This is a common mistake across frontend codebases and there are tones of content around the web sharing the drawbacks of using `ex port default`. For more details, please check [Typescript Deep Dive: Avoid Export Default](https://basarat.gitbook.io/typescript/main-1/defaultisbad) link
+
+### Now allowing usage of imports in certain libraries
+
+Another common mistake is allowing several ways of using specific libraries and integrations. As an example, this codebase covers a scenario quite common of unit tests having some custom render method exported from `@testing-library/react`. There are some special reasons around that, such as:
+
+- components using other libraries, such as `react-router` hooks, which requires a component provider as a wrapper.
+- Specific app configuration to be passed through the components, such as page and template components
+
+```js
+// ❌ it throws an error when running `npm run lint`
+// Also, it shows a message with the solution
+//    `Please use 'import { renderWithQueryProvider } from "@test/testUtils"' instead`
+import { render } from '@testing-library/react'
+// ...
+```
+
+### Guiding developers through code structure
+
+Commonly the application will evolve and the app might come up with some problems architectural decisions by accident, architectural erosion and such. Hopefully, there are ways to mitigate that via code.
+
+As an example, this codebase covers scenarios where API requests should be added/created/updated and some library usage should be allowed in specific folders and files, respectively.
+
+For more details, please look the rules `no-restricted-globals` and `no-restricted-imports` inside `.eslintrc.cjs` file
+
 ## Improvements
 
 These are the list of the tech debt / improvements for this project
 
-- [ ] Improve the Developer Experience - AKA DX - in this project by improving some ESLint/Prettier rules, Lint-Staged and Husky hooks, etc;
+- [ ] Improve the Developer Experience - AKA DX - in this project by improving some ESLint/Prettier rules, Lint-Staged and Husky hooks, etc. The current setup is good, but there are always some room for improvement;
 - [ ] Add different layers of test, such as performance and E2E tests;
 - [ ] Error Boundary to catch all the application errors;
-- [ ] Add StorybookJS scenarios, simulating how the components should work in different cases;
-- [ ] Create specific components for forms cells (inputs, select, etc) and make them reusable. Unfortunately, I couldn't get it done due code challenge deadlines, but this is something quite easy to be applied;
+- [ ] Add StorybookJS/Vitepress scenarios, simulating how the components should work in different cases;
+- [ ] Create specific components for forms cells (inputs, select, etc) and make them reusable. Unfortunately, I couldn't done that yet, but this is something quite easy to be applied;
 - [ ] Service discovery integration with the API, such as `consul`, with fallback for `.env`. This will make the application decoupled with the code and configuration, avoiding unnecessary deployment in case of the configuration changes;
 
 ## Author
