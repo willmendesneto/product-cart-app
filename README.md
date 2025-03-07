@@ -1,8 +1,8 @@
-# Navalia App
+# Product Cart App
 
-> Navalia App - Shopping Cart
+> Product/Shopping Cart App
 
-![main branch](https://github.com/willmendesneto/navalia-app/actions/workflows/main.yml/badge.svg?branch=main)
+![main branch](https://github.com/willmendesneto/product-cart-app/actions/workflows/main.yml/badge.svg?branch=main)
 
 ## Frameworks, Libraries and Tools
 
